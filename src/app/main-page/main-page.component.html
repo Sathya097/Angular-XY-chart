@@ -1,0 +1,75 @@
+<div class="main-page-container full-width float-left">
+    <div class="main-page-header full-width float-left">
+
+    </div>
+    <div class="main-page-body full-width float-left">
+        <div class="body-content-container full-width float-left">
+             <!-- User input section starts -->
+             <div class="user-input-container float-left">
+                 <div class="user-input-heading full-width float-left">
+                     INPUT
+                 </div>
+                 <div class="user-input-placeholder full-width float-left">
+                     X Coordinate
+                 </div>
+                 <input type="number" [min]="0" [max]="595" [(ngModel)]="xvalue" (keyup)="changeValue()" [value]="xvalue" class="user-input-section xvalueclass full-width float-left">
+
+                 <div class="user-input-placeholder full-width float-left">
+                    Y Coordinate
+                </div>
+                <input type="number" [min]="0" [max]="295" [(ngModel)]="yvalue" (keyup)="changeValue()" [value]="yvalue" class="user-input-section yvalueclass full-width float-left">
+
+                <div class="user-input-placeholder full-width float-left">
+                    Width
+                </div>
+                <input type="number" min=20  [(ngModel)]="insideRectWidth" (keyup)="changeValue()" [value]="insideRectWidth" class="user-input-section rectwidth full-width float-left">
+
+                <div class="user-input-placeholder full-width float-left">
+                    Height
+                </div>
+                <input type="number" min=20 [(ngModel)]="insideRectHeight" (keyup)="changeValue()" [value]="insideRectHeight" class="user-input-section rectheight full-width float-left">
+
+             </div>
+             <!-- User input section ends -->
+
+             <!-- Graph section starts -->
+             <div class="graph-main-body float-left">
+                 <div class="graph-container full-width float-left">
+                    <div class="graph-heading full-width float-left position-relative" (click)="myFun()">
+                        PREVIEW
+                        <div class="x-axis-contianer">
+                            <div class="x-axis">50</div>
+                            <div class="x-axis">100</div>
+                            <div class="x-axis">150</div>
+                            <div class="x-axis">200</div>
+                            <div class="x-axis">250</div>
+                            <div class="x-axis">300</div>
+                            <div class="x-axis">350</div>
+                            <div class="x-axis">400</div>
+                            <div class="x-axis">450</div>
+                            <div class="x-axis">500</div>
+                            <div class="x-axis">550</div>
+                            <div class="x-axis">600</div>
+                        </div>
+                        <div class="y-axis-contianer">
+                            <div class="y-axis">300</div><br>
+                            <div class="y-axis">250</div><br>
+                            <div class="y-axis">200</div><br>
+                            <div class="y-axis">150</div><br>
+                            <div class="y-axis">100</div><br>
+                            <div class="y-axis">50</div><br>
+                            <div class="y-axis">0</div><br>
+                        </div>
+                    </div>
+                    
+                    <div class="full-width grph-cont padding-left50 float-left">
+                        <canvas id="canvasId" (mousedown)="onMouseDown($event)"></canvas>
+                    </div>
+
+                 </div>
+             </div>
+             <!-- Graph section ends -->
+        </div>
+    </div>  
+</div>
+

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  padding: 0px !important;
+  margin: 0px !important;
+ 
+}
+*{
+    box-sizing: border-box !important;
+}
+.float-left
+{
+    float:left !important;
+}
+.float-right
+{
+    float: right !important;
+}
+.full-width
+{
+    width: 100%;
+}
